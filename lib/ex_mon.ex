@@ -1,5 +1,4 @@
 defmodule ExMon do
-
   @moduledoc """
   Documentation for ExMon
 
