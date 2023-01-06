@@ -1,5 +1,4 @@
 defmodule ExMon do
-<<<<<<< HEAD
 
   @moduledoc """
   Documentation for ExMon
@@ -24,9 +23,6 @@ defmodule ExMon do
   """
   alias ExMon.{Game, Player}
   alias ExMon.Game.Status
-=======
-  alias ExMon.{Game, Player}
->>>>>>> 8ad038ca62a0ad701ed858500c79fc2a1b3aa165
 
   @computer_name "BenderRobot"
   def create_player(name, move_avg, move_heal, move_rnd) do
@@ -37,10 +33,6 @@ defmodule ExMon do
     @computer_name
     |> create_player(:punch, :kick, :heal)
     |> Game.start(player)
-<<<<<<< HEAD
-
     Status.print_round_message()
-=======
->>>>>>> 8ad038ca62a0ad701ed858500c79fc2a1b3aa165
   end
 end
