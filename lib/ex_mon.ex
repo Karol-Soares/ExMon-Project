@@ -1,8 +1,4 @@
 defmodule ExMon do
-<<<<<<< HEAD
-
-=======
->>>>>>> 7179b6f925da43198bfdce81d519525c87d86bb0
   @moduledoc """
   Documentation for ExMon
 
@@ -36,10 +32,7 @@ defmodule ExMon do
     @computer_name
     |> create_player(:punch, :kick, :heal)
     |> Game.start(player)
-<<<<<<< HEAD
-=======
 
->>>>>>> 7179b6f925da43198bfdce81d519525c87d86bb0
     Status.print_round_message()
   end
 end
