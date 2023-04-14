@@ -25,7 +25,7 @@ defmodule ExMon do
 
   @computer_name "BenderRobot"
   def create_player(name, move_avg, move_heal, move_rnd) do
-    Player.build(name, move_rnd, move_avg, move_heal)
+    Player.build(name, move_avg, move_heal, move_rnd)
   end
 
   def start_game(player) do
@@ -37,6 +37,18 @@ defmodule ExMon do
   end
 
   def make_move(move) do
-    Actions.fetch_move(move)
+    move
+    |> Actions.fetch_move()
+    |> do_move()
   end
+
+  defp do_move({:error, move}), do: Status.print_wrong_move_message(move)
+
+  defp do_move({:ok, move}) do
+    case move do
+      :move_heal -> "realiza_cura"
+      move -> Actions.attack(move)
+    end
+  end
+
 end
